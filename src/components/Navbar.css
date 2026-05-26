@@ -44,7 +44,7 @@
 .navbar__burger {
   display: none; flex-direction: column; gap: 5px;
   width: 36px; height: 36px; align-items: center; justify-content: center;
-  border-radius: 8px; background: var(--bg-2);
+  border-radius: 8px; background: var(--bg-2); position: relative; z-index: 100;
 }
 .navbar__burger span {
   display: block; width: 18px; height: 2px;
@@ -74,6 +74,6 @@
 @media (max-width: 900px) {
   .navbar__links { display: none; }
   .navbar__actions { display: none; }
-  .navbar__burger { display: flex; }
+  .navbar__burger { display: flex; position: absolute; right: 20px; }
   .navbar__mobile { display: flex; }
 }

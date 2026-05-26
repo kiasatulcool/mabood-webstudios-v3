@@ -74,11 +74,12 @@ export default function Contact() {
       if (dbErr) throw dbErr
 
       // Send via Formspree
-      await fetch('https://formspree.io/f/xreyaavq', {
+      const emailRes = await fetch('https://formspree.io/f/xreyaavq', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(form),
       })
+      if (!emailRes.ok) console.warn('Formspree response:', emailRes.status)
 
       setStatus('success')
       setForm(INIT)
