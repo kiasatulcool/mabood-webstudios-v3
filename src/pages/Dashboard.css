@@ -1,0 +1,27 @@
+.dash-page { background: var(--bg); }
+.dash-header { background: var(--bg-2); border-bottom: 1px solid var(--border-light); padding: 24px 0; }
+.dash-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.dash-body { padding: 32px 24px; display: flex; flex-direction: column; gap: 24px; }
+.dash-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.dash-stat { padding: 24px; text-align: center; }
+.dash-stat__num { display: block; font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--accent); }
+.dash-stat__label { font-size: 13px; color: var(--text-muted); margin-top: 4px; display: block; }
+.dash-table-wrap { padding: 24px; overflow: hidden; }
+.dash-table-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.dash-table { border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+.dash-table__head { display: grid; grid-template-columns: 1fr 2fr 1.5fr 1fr; gap: 16px; padding: 12px 16px; background: var(--bg); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+.dash-table__row { display: grid; grid-template-columns: 1fr 2fr 1.5fr 1fr; gap: 16px; padding: 14px 16px; border-top: 1px solid var(--border-light); font-size: 14px; transition: background 0.15s; }
+.dash-table__row:hover { background: var(--bg); }
+.dash-empty { text-align: center; padding: 48px 24px; color: var(--text-muted); }
+.dash-empty span { font-size: 36px; display: block; margin-bottom: 12px; }
+.dash-empty p { margin-bottom: 16px; }
+.dash-message { padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.dash-skel { display: grid; grid-template-columns: 1fr 2fr 1.5fr 1fr 0.5fr; gap: 16px; padding: 14px 16px; border-top: 1px solid var(--border-light); }
+@media (max-width: 768px) {
+  .dash-stats { grid-template-columns: 1fr 1fr; }
+  .dash-table__head, .dash-table__row { grid-template-columns: 1fr 2fr 1fr; }
+  .dash-table__head span:nth-child(3), .dash-table__row span:nth-child(3) { display: none; }
+}
+@media (max-width: 480px) {
+  .dash-stats { grid-template-columns: 1fr 1fr; }
+}
